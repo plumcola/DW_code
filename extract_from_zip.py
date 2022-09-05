@@ -54,20 +54,7 @@ def extract_files(zip_file, out_dir, delete_zip=False):
 
 
 if __name__ == '__main__':
-    # directory containing DIAC-WOZ zip files
-    # dir_name = '/Volumes/Seagate Backup Plus Drive/DAIC-WOZ/'
-    #
-    # # directory where audio and transcripts folders will be created
-    # out_dir = '/Users/zhangjian/Downloads/depression-detect/depression-detect/data/raw'
-    #
-    # # delete zip file after file wav and csv extraction
-    # delete_zip = False
-    #
-    # # iterate through zip files in dir_name and extracts wav and transcripts
-    # for file in os.listdir(dir_name):
-    #     if file.endswith('.zip'):
-    #         zip_file = os.path.join(dir_name, file)
-    #         extract_files(zip_file, out_dir, delete_zip=delete_zip)
+
     import shutil
     path="./DAIC-WOZ"
     wav_path="./audio"
