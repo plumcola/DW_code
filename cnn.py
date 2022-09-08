@@ -150,7 +150,7 @@ def standard_confusion_matrix(y_test, y_test_pred):
 
 def dataIter(batch_size,trainX, trainY):
 
-    trainX1 = torch.tensor(trainX)  # 这里必须是tensor
+    trainX1 = torch.tensor(trainX)  
     trainY1 = torch.tensor(trainY,dtype=torch.long)
     dataset = TensorDataset(trainX1, trainY1)
     train_data_iter = DataLoader(dataset, batch_size, shuffle=True)
