@@ -107,7 +107,7 @@ loss_fn = nn.CrossEntropyLoss()
 def train_model():
     length=len(dataset)
 
-    #先用1e-3训练十个轮次，观察到损失函数不下降时，换成1e-4训练5-10个轮次，由于随机batch，有一定可能在第一阶段出现过拟，这时重新初始化神经网络从头训练即可
+    
     optimizer = torch.optim.Adam(vad.parameters(), lr=1e-3,)
 
     epochs =10
@@ -168,7 +168,7 @@ def plot_ROC(labels, preds, path):
     plt.ylabel('Sensitivity')
     plt.title('ROCs for Densenet')
     plt.legend(loc="lower right")
-    plt.savefig("./images/"+path+"_roc.jpg")  # 保存文件
+    plt.savefig("./images/"+path+"_roc.jpg") 
 
 def test_model():
     net=torch.load("./models/"+path+'.pth')
